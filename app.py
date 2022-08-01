@@ -1,12 +1,11 @@
 import gradio as gr
 from fastai.vision.all import *
 
-def is_cat(x): return x[0].isupper()
+#def is_cat(x): return x[0].isupper()
 
 learn = load_learner('model.pkl')
 
 labels = learn.dls.vocab
-print(labels)
 
 def predict(img):
     img = PILImage.create(img)
