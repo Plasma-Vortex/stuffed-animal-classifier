@@ -14,7 +14,7 @@ def predict(img):
 
 iface = gr.Interface(
     fn=predict,
-    inputs=gr.Image(source='webcam', shape=(192,192)),
+    inputs=gr.Image(source='upload', shape=(224,224)),
     outputs=gr.Label(num_top_classes=3)
 )
 iface.launch(share=True)
